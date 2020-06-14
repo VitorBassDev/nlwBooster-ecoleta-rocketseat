@@ -1,16 +1,12 @@
 //  IMPORTAR A BIBLIOTECA EXPRESS
-import express from 'express'; 
+import express, { request, response } from 'express'; 
+// AS ROTAS ESTÃO SENDO IMPORTADAS DE DENTRO DO ARQUIVO ROUTES.TS
+import routes from './routes';
+
 
 const app = express();
+app.use(express.json());
+app.use(routes);
 
-// Criar Rota  para Usuários
-app.get('/users', (request, response) => {
-  //console.log('Listagem de Usuários');
-
-	response.json([
-		'Nome','Vítor',
-		'Idade','24'
-	]);
-});
 // Setar Porta para execução 
 app.listen(3333); 
