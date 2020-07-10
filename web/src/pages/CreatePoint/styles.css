@@ -64,6 +64,8 @@
   font-size: 14px;
   font-weight: normal;
   color: var(--text-color);
+  justify-content: right;
+  
 }
 
 #page-create-point form .field-group {
